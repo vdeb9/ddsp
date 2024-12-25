@@ -22,6 +22,8 @@ from ddsp import losses
 from ddsp import processors
 from ddsp import spectral_ops
 from ddsp import synths
+!pip install tensorflow==2.1.0
+
 
 # Version number.
 from ddsp.version import __version__
