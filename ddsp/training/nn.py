@@ -862,7 +862,9 @@ class FcStack(tf.keras.Sequential):
     print("FcStack Initializing")
     layers = [Fc(ch, nonlinearity) for i in range(layers)]
     #layers.insert(0,tfkl.InputLayer())
+    print("before init")
     super().__init__(layers, **kwargs)
+    print("after init")
 
 
 @gin.register
