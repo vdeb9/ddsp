@@ -861,7 +861,7 @@ class FcStack(tf.keras.Sequential):
   def __init__(self, ch=256, layers=2, nonlinearity='leaky_relu', **kwargs):
     print("FcStack Initializing")
     layers = [Fc(ch, nonlinearity) for i in range(layers)]
-    layers.insert(0,tfkl.InputLayer())
+    #layers.insert(0,tfkl.InputLayer())
     super().__init__(layers, **kwargs)
 
 
