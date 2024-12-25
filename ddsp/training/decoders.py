@@ -88,6 +88,9 @@ class RnnFcDecoder(nn.DictLayer):
       state = inputs.pop()
 
     # Initial processing.
+    print(inputs)
+    print(",input stacks:")
+    print(self.input_stacks)
     inputs = [stack(x) for stack, x in zip(self.input_stacks, inputs)]
 
     # Run an RNN over the latents.
