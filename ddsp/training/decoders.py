@@ -91,6 +91,7 @@ class RnnFcDecoder(nn.DictLayer):
     print(inputs)
     print(",input stacks:")
     print(self.input_stacks)
+    print(self.input_stacks.shape)
     inputs = [stack(x) for stack, x in zip(self.input_stacks, inputs)]
 
     # Run an RNN over the latents.
