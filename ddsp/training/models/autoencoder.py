@@ -55,8 +55,9 @@ class Autoencoder(Model):
   def call(self, features, training=True):
     """Run the core of the network, get predictions and loss."""
     features = self.encode(features, training=training)
+    print(features)
     features.update(self.decoder(features, training=training))
-
+    print("features updated")
     # Run through processor group.
     pg_out = self.processor_group(features, return_outputs_dict=True)
 
