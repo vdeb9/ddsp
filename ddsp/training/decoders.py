@@ -92,7 +92,9 @@ class RnnFcDecoder(nn.DictLayer):
     print(",input stacks:")
     print(self.input_stacks)
     print(self.input_stacks.shape)
+    print("close")
     inputs = [stack(x) for stack, x in zip(self.input_stacks, inputs)]
+    print("pass")
 
     # Run an RNN over the latents.
     x = tf.concat(inputs, axis=-1)
