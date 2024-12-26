@@ -88,9 +88,12 @@ class RnnFcDecoder(nn.DictLayer):
       state = inputs.pop()
 
     # Initial processing.
+    print("Inputs:")
     print(inputs)
-    print(",input stacks:")
+    print()
+    print("Input stacks:")
     print(self.input_stacks)
+    print()
     print(self.input_stacks.shape)
     print("close")
     inputs = [stack(x) for stack, x in zip(self.input_stacks, inputs)]
