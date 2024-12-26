@@ -94,7 +94,7 @@ class RnnFcDecoder(nn.DictLayer):
     print("Input stacks:")
     print(self.input_stacks)
     print()
-    print(self.input_stacks.shape)
+    print(len(self.input_stacks))
     print("close")
 
 
